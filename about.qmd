@@ -1,0 +1,9 @@
+---
+title: "Math 237 Example Project"
+---
+
+About this site
+
+```{r}
+1 + 1
+```

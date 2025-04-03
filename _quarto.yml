@@ -3,12 +3,14 @@ project:
   output-dir: docs
 
 website:
-  title: "example-website"
+  title: "CSUF Math Example Projects"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - math-237-example.qmd
+      - href: math-437-example.qmd
+        text: "Math 437"
 
 format:
   html:

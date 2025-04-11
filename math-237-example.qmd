@@ -2,8 +2,220 @@
 title: "Math 237 Example Project"
 ---
 
-About this site
+#### {.disclaimer_block}
+
+**Disclaimer**: This project formatting is adapted from the [Open Case Studies](https://opencasestudies.github.io){target="_blank"} project. The purpose of the Open Case Studies project is **to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data**. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts. 
+
+####
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+At some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project.
+
+:::
+
+## Motivation and Context
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This section describes what you are investigating in your project and why you are investigating it. You should provide enough contextual background and information that someone with a limited background can understand the broad outlines of the topic being investigated.
+
+:::
 
 ```{r}
-1 + 1
+#| label: do this first
+#| echo: false
+#| message: false
+
+here::i_am("math-237-example.qmd")
 ```
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+There's an invisible chunk that uses `here::i_am` to indicate the location of this file relative to the rest of the project website. The option `echo: false` makes the code invisible and the option `message: false` prevents the "here() starts at..." message from displaying.
+
+:::
+
+## Main Objective
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This section should introduce your main question or objective in the context you described above.
+
+:::
+
+Our main objective in this project is to investigate how the historical makeup of Los Angeles neighborhoods has propagated to the present day. In particular, we are interested in how well we can predict difficulties with obtaining housing loans based on how the neighborhood was described in the 1930's.
+
+## Packages Used In This Analysis
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description you are using each package. The Open Case Studies project uses a tabular form, which I replicate below.
+
+:::
+
+```{r}
+#| label: load packages
+#| message: false
+#| warning: false
+
+library(here)
+library(readr)
+library(dplyr)
+library(sf)
+library(jsonlite)
+```
+
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+I included `message: false` and `warning: false` options in the chunk above so that package conflicts and similar issues aren't shown when loading the packages.
+
+:::
+
+
+ Package   | Use                                                                         
+---------- |-------------
+[here](https://github.com/jennybc/here_here)       | to easily load and save data
+[readr](https://readr.tidyverse.org/)      | to import the CSV file data
+[sf](https://r-spatial.github.io/sf/)   | to import and work with geojson files
+[jsonlite](https://jeroen.r-universe.dev/jsonlite)  | to work with json files
+[dplyr](https://dplyr.tidyverse.org/)      | to massage and summarize data
+[rsample](https://rsample.tidymodels.org/) | to split data into training and test sets
+[ggplot2](https://ggplot2.tidyverse.org/)      | to create nice-looking and informative graphs
+[broom](https://broom.tidymodels.org/)      | to neatly obtain the coefficients of a regression model
+
+
+## Design and Data Collection
+
+### Data Description
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data. 
+
+:::
+
+```{r}
+#| label: import data
+#| message: false
+#| warning: false
+
+loans <- readr::read_csv(here::here("data/loans_lac_2022.csv"))
+
+data_2020 <- sf::read_sf(here::here("data/MIv3Areas_2020TractCrosswalk.geojson")) |>   
+  filter(city == "Los Angeles") # get LA only data
+
+la_ad <- jsonlite::fromJSON(here::here("data/ad_data.json")) |>
+  filter(city == "Los Angeles")
+```
+
+### Limitations
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This subsection should indicate limitations of your data and analysis. Some questions to consider addressing include:
+
+* Are the data valid (variables measure what you think they represent) and reliable (consistently and accurately measured)?
+* Are the assumptions behind your analytical methods justified?
+* Are there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?
+
+:::
+
+## Data Massaging
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This section should include most of your data wrangling. If you are creating training and test sets for predictive modeling, you should include that code in an appropriate place in this section.
+
+:::
+
+```{r}
+glimpse(loans)
+glimpse(data_2020)
+glimpse(la_ad)
+```
+
+Note that the census tract IDs are in the same 12-digit number format and we can join the `loans` and `data_2020_la2` datasets. It is probably best to summarize the HLA data first and then join. 
+
+Note that some tracts are in multiple of the HOLC tracts, so we need the GEOID data to be the base. We also need to decide HOW to define the tract - highest grade, lowest grade, grade of highest proportion of tract?
+
+```{r}
+loans_tract <- loans |>
+  group_by(census_tract) |>
+  summarize(
+    applications = n(),
+    population = mean(tract_population),
+    minority = mean(tract_minority_population_percent),
+    income = mean(tract_to_msa_income_percentage),
+    median_loan_amount = median(loan_amount, na.rm = TRUE)
+  )
+```
+
+
+```{r}
+crosswalked <- loans_tract |>
+  left_join(
+    data_2020,
+    by = c("census_tract" = "GEOID")
+  )
+```
+
+## Exploratory Data Analysis
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This section should include exploratory data analysis that is relevant to your objective.
+
+:::
+
+## Modeling
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+If you are not building a model, you don't need this section. Otherwise, this section should include your predictive or inferential modeling.
+
+:::
+
+## Conclusion
+
+### Main Insight
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This subsection should include one or more graphs, figures or tables that summarize the primary finding with respect to your main objective. You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.
+
+:::
+
+### Limitations and Future Work
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+This subsection should describe potential limitations of the conclusion (think about the limitations you identified earlier) and/or future work that someone might consider doing to expand on your analysis.
+
+:::
+
+### Reflection
+
+::: {.callout-note icon=false}
+## Dr. Wynne's Note
+
+You will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:
+
+* What did you learn about data science from this project?
+* How did doing the data science increase your understanding of the domain you applied it to?
+
+:::

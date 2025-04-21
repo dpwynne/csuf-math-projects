@@ -89,12 +89,8 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./math-237-example.html"> 
-<span class="menu-text">Math 237 Example Project</span></a>
+<span class="menu-text">Math 237</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./math-437-example.html" aria-current="page"> 
@@ -111,8 +107,30 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-to-the-example" id="toc-introduction-to-the-example" class="nav-link active" data-scroll-target="#introduction-to-the-example">Introduction to the Example</a></li>
+  <li><a href="#motivation-and-context" id="toc-motivation-and-context" class="nav-link" data-scroll-target="#motivation-and-context">Motivation and Context</a></li>
+  <li><a href="#main-objective" id="toc-main-objective" class="nav-link" data-scroll-target="#main-objective">Main Objective</a></li>
+  <li><a href="#packages-used-in-this-analysis" id="toc-packages-used-in-this-analysis" class="nav-link" data-scroll-target="#packages-used-in-this-analysis">Packages Used In This Analysis</a></li>
+  <li><a href="#design-and-data-collection" id="toc-design-and-data-collection" class="nav-link" data-scroll-target="#design-and-data-collection">Design and Data Collection</a>
+  <ul class="collapse">
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a></li>
+  <li><a href="#data-limitations" id="toc-data-limitations" class="nav-link" data-scroll-target="#data-limitations">Data Limitations</a></li>
+  </ul></li>
+  <li><a href="#data-massaging" id="toc-data-massaging" class="nav-link" data-scroll-target="#data-massaging">Data Massaging</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling">Modeling</a></li>
+  <li><a href="#insights" id="toc-insights" class="nav-link" data-scroll-target="#insights">Insights</a>
+  <ul class="collapse">
+  <li><a href="#limitations-and-future-work" id="toc-limitations-and-future-work" class="nav-link" data-scroll-target="#limitations-and-future-work">Limitations and Future Work</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection">Reflection</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -136,8 +154,297 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction-to-the-example" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-example">Introduction to the Example</h2>
+<p>This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr.&nbsp;Wynne will be looking for when grading.</p>
+<div class="disclaimer_block">
+<p><strong>Disclaimer</strong>: This project formatting is adapted from the <a href="https://opencasestudies.github.io" target="_blank">Open Case Studies</a> project. The purpose of the Open Case Studies project is <strong>to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data</strong>. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.</p>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project.</p>
+</div>
+</div>
+</section>
+<section id="motivation-and-context" class="level2">
+<h2 class="anchored" data-anchor-id="motivation-and-context">Motivation and Context</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section describes what you are investigating in your project and why you are investigating it. You should provide enough contextual background and information that someone with a limited background can understand the broad outlines of the topic being investigated.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There’s an invisible chunk that uses <code>here::i_am</code> to indicate the location of this file relative to the rest of the project website. The option <code>echo: false</code> makes the code invisible and the option <code>message: false</code> prevents the “here() starts at…” message from displaying.</p>
+</div>
+</div>
+</section>
+<section id="main-objective" class="level2">
+<h2 class="anchored" data-anchor-id="main-objective">Main Objective</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section should introduce your main question or objective in the context you described above.</p>
+</div>
+</div>
+</section>
+<section id="packages-used-in-this-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="packages-used-in-this-analysis">Packages Used In This Analysis</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description of why you are using each package. Please use individual package names rather than <code>tidyverse</code> and <code>tidymodels</code>, to make it clear which specific packages are being used.</p>
+<p>The Open Case Studies project uses a tabular form, which I replicate below.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I included <code>message: false</code> and <code>warning: false</code> options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.</p>
+</div>
+</div>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Package</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/jennybc/here_here">here</a></td>
+<td>to easily load and save data</td>
+</tr>
+<tr class="even">
+<td><a href="https://readr.tidyverse.org/">readr</a></td>
+<td>to import the CSV file data</td>
+</tr>
+<tr class="odd">
+<td><a href="https://dplyr.tidyverse.org/">dplyr</a></td>
+<td>to massage and summarize data</td>
+</tr>
+<tr class="even">
+<td><a href="https://naniar.njtierney.com/">naniar</a></td>
+<td>to summarize and visualize missing data</td>
+</tr>
+<tr class="odd">
+<td><a href="https://rsample.tidymodels.org/">rsample</a></td>
+<td>to split data into training and test sets</td>
+</tr>
+<tr class="even">
+<td><a href="https://ggplot2.tidyverse.org/">ggplot2</a></td>
+<td>to create nice-looking and informative graphs</td>
+</tr>
+<tr class="odd">
+<td><a href="https://broom.tidymodels.org/">broom</a></td>
+<td>to neatly obtain the coefficients of a regression model</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="design-and-data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-data-collection">Design and Data Collection</h2>
+<section id="data-description" class="level3">
+<h3 class="anchored" data-anchor-id="data-description">Data Description</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.</p>
+</div>
+</div>
+</section>
+<section id="data-limitations" class="level3">
+<h3 class="anchored" data-anchor-id="data-limitations">Data Limitations</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This subsection should indicate limitations of your data. To quote from the project proposal prompt, consider:</p>
+<ul>
+<li>Sources of bias in the data collection methods,</li>
+<li>Mismatches between the variables in the dataset and the real-world characteristics they are intended to describe</li>
+<li>Real-world differences that may make your model inappropriate for data collected from other times/places/etc.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="data-massaging" class="level2">
+<h2 class="anchored" data-anchor-id="data-massaging">Data Massaging</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section contains any data wrangling you are doing. If you are creating training and test sets for predictive modeling, you should also include that code in an appropriate place in this section.</p>
+</div>
+</div>
+</section>
+<section id="exploratory-data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section should include exploratory data analysis that is relevant to your objective.</p>
+</div>
+</div>
+</section>
+<section id="modeling" class="level2">
+<h2 class="anchored" data-anchor-id="modeling">Modeling</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section must include, at minimum:</p>
+<ul>
+<li>A description of how/why the technique(s) you chose work(s)</li>
+<li>Code to fit the model(s), including any pre-processing you are doing on the training set</li>
+<li>Code to calculate one or measures of model performance</li>
+<li>Why you chose each measure of model performance, what those measures represent, and how they are calculated</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="insights" class="level2">
+<h2 class="anchored" data-anchor-id="insights">Insights</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This section should include one or more graphs, figures or tables that summarize your primary finding(s). You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.</p>
+</div>
+</div>
+<section id="limitations-and-future-work" class="level3">
+<h3 class="anchored" data-anchor-id="limitations-and-future-work">Limitations and Future Work</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<blockquote class="blockquote">
+<p>“All models are wrong, but some are useful.” - George Box</p>
+<p>“All models are wrong, but some are wrong-er.” - Sam Behseta</p>
+</blockquote>
+<p>This section should include further exploration of the limitations of your modeling approach. Some avenues of exploration include:</p>
+<ul>
+<li>Who/what is being poorly predicted by your model? Why?</li>
+<li>How might someone improve the data collection or analysis in the future?</li>
+<li>Are the assumptions behind your analytical methods justified?</li>
+<li>Are there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="reflection" class="level3">
+<h3 class="anchored" data-anchor-id="reflection">Reflection</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Dr.&nbsp;Wynne’s Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:</p>
+<ul>
+<li>What did you learn about statistical learning from this project?</li>
+<li>How did your work increase your understanding of the domain you applied it to?</li>
+</ul>
+</div>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

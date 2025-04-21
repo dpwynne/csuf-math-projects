@@ -2,3 +2,175 @@
 title: "Math 437 Example Project"
 ---
 
+## Introduction to the Example
+
+This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr. Wynne will be looking for when grading.
+
+:::{.disclaimer_block}
+
+**Disclaimer**: This project formatting is adapted from the [Open Case Studies](https://opencasestudies.github.io){target="_blank"} project. The purpose of the Open Case Studies project is **to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data**. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.
+
+::: 
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+At some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project.
+:::
+
+## Motivation and Context
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section describes what you are investigating in your project and why you are investigating it. You should provide enough contextual background and information that someone with a limited background can understand the broad outlines of the topic being investigated.
+:::
+
+```{r}
+#| label: do this first
+#| echo: false
+#| message: false
+
+here::i_am("math-437-example.qmd")
+```
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+There's an invisible chunk that uses `here::i_am` to indicate the location of this file relative to the rest of the project website. The option `echo: false` makes the code invisible and the option `message: false` prevents the "here() starts at..." message from displaying.
+:::
+
+## Main Objective
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section should introduce your main question or objective in the context you described above.
+:::
+
+## Packages Used In This Analysis
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description of why you are using each package. Please use individual package names rather than `tidyverse` and `tidymodels`, to make it clear which specific packages are being used.
+
+The Open Case Studies project uses a tabular form, which I replicate below.
+:::
+
+```{r}
+#| label: load packages
+#| message: false
+#| warning: false
+
+
+```
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+I included `message: false` and `warning: false` options in the chunk above so that package conflicts and similar issues aren't shown when loading the packages.
+:::
+
+| Package | Use |
+|-------------------------------|----------------------------------------|
+| [here](https://github.com/jennybc/here_here) | to easily load and save data |
+| [readr](https://readr.tidyverse.org/) | to import the CSV file data |
+| [dplyr](https://dplyr.tidyverse.org/) | to massage and summarize data |
+| [naniar](https://naniar.njtierney.com/) | to summarize and visualize missing data |
+| [rsample](https://rsample.tidymodels.org/) | to split data into training and test sets |
+| [ggplot2](https://ggplot2.tidyverse.org/) | to create nice-looking and informative graphs |
+| [broom](https://broom.tidymodels.org/) | to neatly obtain the coefficients of a regression model |
+
+## Design and Data Collection
+
+### Data Description
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.
+:::
+
+```{r}
+#| label: import data
+#| warning: false
+
+```
+
+### Data Limitations
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This subsection should indicate limitations of your data. To quote from the project proposal prompt, consider:
+
+-   Sources of bias in the data collection methods,
+-   Mismatches between the variables in the dataset and the real-world characteristics they are intended to describe
+-   Real-world differences that may make your model inappropriate for data collected from other times/places/etc.
+:::
+
+## Data Massaging
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section contains any data wrangling you are doing. If you are creating training and test sets for predictive modeling, you should also include that code in an appropriate place in this section.
+:::
+
+## Exploratory Data Analysis
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section should include exploratory data analysis that is relevant to your objective.
+:::
+
+## Modeling
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section must include, at minimum:
+
+-   A description of how/why the technique(s) you chose work(s)
+-   Code to fit the model(s), including any pre-processing you are doing on the training set
+-   Code to calculate one or measures of model performance
+-   Why you chose each measure of model performance, what those measures represent, and how they are calculated
+:::
+
+## Insights
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+This section should include one or more graphs, figures or tables that summarize your primary finding(s). You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.
+:::
+
+### Limitations and Future Work
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+> "All models are wrong, but some are useful." - George Box
+>
+> "All models are wrong, but some are wrong-er." - Sam Behseta
+
+This section should include further exploration of the limitations of your modeling approach. Some avenues of exploration include:
+
+-   Who/what is being poorly predicted by your model? Why?
+-   How might someone improve the data collection or analysis in the future?
+-   Are the assumptions behind your analytical methods justified?
+-   Are there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?
+:::
+
+### Reflection
+
+::: {.callout-note icon="false"}
+## Dr. Wynne's Note
+
+You will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:
+
+-   What did you learn about statistical learning from this project?
+-   How did your work increase your understanding of the domain you applied it to?
+:::

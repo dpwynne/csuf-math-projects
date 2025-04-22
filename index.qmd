@@ -1,11 +1,29 @@
 ---
-title: "Dr. Wynne's Example Project Website"
+title: "Dr. Wynne's Example Projects"
+subtitle: "California State University, Fullerton"
+image: img/DW500-500.jpg
+about:
+  template: solana
+  image-alt: "A headshot of Dwight Wynne"
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/dpwynne
+    - icon: hexagon
+      text: Project PIPE-LINE
+      href: https://pipelinedatascience.org/  
 ---
 
-This is a Quarto website.
+I am Dwight Wynne, a lecturer in the [Department of Mathematics](https://www.fullerton.edu/math/) at California State University, Fullerton (CSUF). I teach a variety of statistics and data science courses.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+## Math 237: Foundations of Data Science
 
-```{r}
-1 + 1
-```
+This course introduces students to basic techniques and thought processes in data science, including data collection, data wrangling, exploratory data analysis, frequentist and Bayesian statistical inference, and predictive modeling. This course is one of two courses that fulfills the Introduction to Data Science requirement for CSUF's Data Science minor; as the other is upper division, this is likely the course that introductory data science courses at two-year institutions will articulate with.
+
+Students end the semester by creating their first data science project. The [Math 237 Example Project](/math-237-example.html) provides guidelines and an example for students completing this project.
+
+## Math 437: Modern Data Analysis
+
+This course was originally designed to introduce senior-level mathematics students to nonparametric and Bayesian inference, with clustering and neural networks introduced toward the end of the course. As data science and machine learning have become more popular, the emphasis has changed to supervised and unsupervised learning, with a focus on understanding the underlying mathematics.
+
+Students end the semester by creating a project that applies supervised or unsupervised learning. The [Math 437 Example Project](/math-437-example.html) provides guidelines and an example for students completing this project.

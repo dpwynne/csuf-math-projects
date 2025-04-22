@@ -1,16 +1,156 @@
 [
   {
+    "objectID": "math-437-example.html",
+    "href": "math-437-example.html",
+    "title": "Math 437 Example Project",
+    "section": "",
+    "text": "This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr. Wynne will be looking for when grading.\n\nDisclaimer: This project formatting is adapted from the Open Case Studies project. The purpose of the Open Case Studies project is to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nAt some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project."
+  },
+  {
+    "objectID": "math-437-example.html#introduction-to-the-example",
+    "href": "math-437-example.html#introduction-to-the-example",
+    "title": "Math 437 Example Project",
+    "section": "",
+    "text": "This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr. Wynne will be looking for when grading.\n\nDisclaimer: This project formatting is adapted from the Open Case Studies project. The purpose of the Open Case Studies project is to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nAt some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project."
+  },
+  {
+    "objectID": "math-437-example.html#motivation-and-context",
+    "href": "math-437-example.html#motivation-and-context",
+    "title": "Math 437 Example Project",
+    "section": "Motivation and Context",
+    "text": "Motivation and Context\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section describes what you are investigating in your project and why you are investigating it. You should provide enough contextual background and information that someone with a limited background can understand the broad outlines of the topic being investigated.\n\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThere’s an invisible chunk that uses here::i_am to indicate the location of this file relative to the rest of the project website. The option echo: false makes the code invisible and the option message: false prevents the “here() starts at…” message from displaying."
+  },
+  {
+    "objectID": "math-437-example.html#main-objective",
+    "href": "math-437-example.html#main-objective",
+    "title": "Math 437 Example Project",
+    "section": "Main Objective",
+    "text": "Main Objective\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should introduce your main question or objective in the context you described above."
+  },
+  {
+    "objectID": "math-437-example.html#packages-used-in-this-analysis",
+    "href": "math-437-example.html#packages-used-in-this-analysis",
+    "title": "Math 437 Example Project",
+    "section": "Packages Used In This Analysis",
+    "text": "Packages Used In This Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description of why you are using each package. Please use individual package names rather than tidyverse and tidymodels, to make it clear which specific packages are being used.\nThe Open Case Studies project uses a tabular form, which I replicate below.\n\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nI included message: false and warning: false options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.\n\n\n\n\n\nPackage\nUse\n\n\n\n\nhere\nto easily load and save data\n\n\nreadr\nto import the CSV file data\n\n\ndplyr\nto massage and summarize data\n\n\nnaniar\nto summarize and visualize missing data\n\n\nrsample\nto split data into training and test sets\n\n\nggplot2\nto create nice-looking and informative graphs\n\n\nbroom\nto neatly obtain the coefficients of a regression model"
+  },
+  {
+    "objectID": "math-437-example.html#design-and-data-collection",
+    "href": "math-437-example.html#design-and-data-collection",
+    "title": "Math 437 Example Project",
+    "section": "Design and Data Collection",
+    "text": "Design and Data Collection\n\nData Description\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.\n\n\n\n\nData Limitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should indicate limitations of your data. To quote from the project proposal prompt, consider:\n\nSources of bias in the data collection methods,\nMismatches between the variables in the dataset and the real-world characteristics they are intended to describe\nReal-world differences that may make your model inappropriate for data collected from other times/places/etc."
+  },
+  {
+    "objectID": "math-437-example.html#data-massaging",
+    "href": "math-437-example.html#data-massaging",
+    "title": "Math 437 Example Project",
+    "section": "Data Massaging",
+    "text": "Data Massaging\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section contains any data wrangling you are doing. If you are creating training and test sets for predictive modeling, you should also include that code in an appropriate place in this section."
+  },
+  {
+    "objectID": "math-437-example.html#exploratory-data-analysis",
+    "href": "math-437-example.html#exploratory-data-analysis",
+    "title": "Math 437 Example Project",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include exploratory data analysis that is relevant to your objective."
+  },
+  {
+    "objectID": "math-437-example.html#modeling",
+    "href": "math-437-example.html#modeling",
+    "title": "Math 437 Example Project",
+    "section": "Modeling",
+    "text": "Modeling\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section must include, at minimum:\n\nA description of how/why the technique(s) you chose work(s)\nCode to fit the model(s), including any pre-processing you are doing on the training set\nCode to calculate one or measures of model performance\nWhy you chose each measure of model performance, what those measures represent, and how they are calculated"
+  },
+  {
+    "objectID": "math-437-example.html#insights",
+    "href": "math-437-example.html#insights",
+    "title": "Math 437 Example Project",
+    "section": "Insights",
+    "text": "Insights\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include one or more graphs, figures or tables that summarize your primary finding(s). You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.\n\n\n\nLimitations and Future Work\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\n\n“All models are wrong, but some are useful.” - George Box\n“All models are wrong, but some are wrong-er.” - Sam Behseta\n\nThis section should include further exploration of the limitations of your modeling approach. Some avenues of exploration include:\n\nWho/what is being poorly predicted by your model? Why?\nHow might someone improve the data collection or analysis in the future?\nAre the assumptions behind your analytical methods justified?\nAre there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?\n\n\n\n\n\nReflection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nYou will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:\n\nWhat did you learn about statistical learning from this project?\nHow did your work increase your understanding of the domain you applied it to?"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Dr. Wynne’s Example Project Website",
+    "title": "Dr. Wynne’s Example Projects",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "I am Dwight Wynne, a lecturer in the Department of Mathematics at California State University, Fullerton (CSUF). I teach a variety of statistics and data science courses."
+  },
+  {
+    "objectID": "index.html#math-237-foundations-of-data-science",
+    "href": "index.html#math-237-foundations-of-data-science",
+    "title": "Dr. Wynne’s Example Projects",
+    "section": "Math 237: Foundations of Data Science",
+    "text": "Math 237: Foundations of Data Science\nThis course introduces students to basic techniques and thought processes in data science, including data collection, data wrangling, exploratory data analysis, frequentist and Bayesian statistical inference, and predictive modeling. This course is one of two courses that fulfills the Introduction to Data Science requirement for CSUF’s Data Science minor; as the other is upper division, this is likely the course that introductory data science courses at two-year institutions will articulate with.\nStudents end the semester by creating their first data science project. The Math 237 Example Project provides guidelines and an example for students completing this project."
+  },
+  {
+    "objectID": "index.html#math-437-modern-data-analysis",
+    "href": "index.html#math-437-modern-data-analysis",
+    "title": "Dr. Wynne’s Example Projects",
+    "section": "Math 437: Modern Data Analysis",
+    "text": "Math 437: Modern Data Analysis\nThis course was originally designed to introduce senior-level mathematics students to nonparametric and Bayesian inference, with clustering and neural networks introduced toward the end of the course. As data science and machine learning have become more popular, the emphasis has changed to supervised and unsupervised learning, with a focus on understanding the underlying mathematics.\nStudents end the semester by creating a project that applies supervised or unsupervised learning. The Math 437 Example Project provides guidelines and an example for students completing this project."
   },
   {
     "objectID": "math-237-example.html",
     "href": "math-237-example.html",
     "title": "Math 237 Example Project",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Disclaimer: This project formatting is adapted from the Open Case Studies project. The purpose of the Open Case Studies project is to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts."
+  },
+  {
+    "objectID": "math-237-example.html#motivation-and-context",
+    "href": "math-237-example.html#motivation-and-context",
+    "title": "Math 237 Example Project",
+    "section": "Motivation and Context",
+    "text": "Motivation and Context\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section describes what you are investigating in your project and why you are investigating it. You should provide enough contextual background and information that someone with a limited background can understand the broad outlines of the topic being investigated.\n\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThere’s an invisible chunk that uses here::i_am to indicate the location of this file relative to the rest of the project website. The option echo: false makes the code invisible and the option message: false prevents the “here() starts at…” message from displaying."
+  },
+  {
+    "objectID": "math-237-example.html#main-objective",
+    "href": "math-237-example.html#main-objective",
+    "title": "Math 237 Example Project",
+    "section": "Main Objective",
+    "text": "Main Objective\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should introduce your main question or objective in the context you described above.\n\n\nOur main objective in this project is to investigate how the historical makeup of Los Angeles neighborhoods has propagated to the present day. In particular, we are interested in how well we can predict difficulties with obtaining housing loans based on how the neighborhood was described in the 1930’s."
+  },
+  {
+    "objectID": "math-237-example.html#packages-used-in-this-analysis",
+    "href": "math-237-example.html#packages-used-in-this-analysis",
+    "title": "Math 237 Example Project",
+    "section": "Packages Used In This Analysis",
+    "text": "Packages Used In This Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description you are using each package. The Open Case Studies project uses a tabular form, which I replicate below.\n\n\n\nlibrary(here)\nlibrary(readr)\nlibrary(dplyr)\nlibrary(sf)\nlibrary(jsonlite)\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nI included message: false and warning: false options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.\n\n\n\n\n\nPackage\nUse\n\n\n\n\nhere\nto easily load and save data\n\n\nreadr\nto import the CSV file data\n\n\nsf\nto import and work with geojson files\n\n\njsonlite\nto work with json files\n\n\ndplyr\nto massage and summarize data\n\n\nrsample\nto split data into training and test sets\n\n\nggplot2\nto create nice-looking and informative graphs\n\n\nbroom\nto neatly obtain the coefficients of a regression model"
+  },
+  {
+    "objectID": "math-237-example.html#design-and-data-collection",
+    "href": "math-237-example.html#design-and-data-collection",
+    "title": "Math 237 Example Project",
+    "section": "Design and Data Collection",
+    "text": "Design and Data Collection\n\nData Description\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.\n\n\n\n\nLimitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should indicate limitations of your data and analysis. Some questions to consider addressing include:\n\nAre the data valid (variables measure what you think they represent) and reliable (consistently and accurately measured)?\nAre the assumptions behind your analytical methods justified?\nAre there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?"
+  },
+  {
+    "objectID": "math-237-example.html#data-massaging",
+    "href": "math-237-example.html#data-massaging",
+    "title": "Math 237 Example Project",
+    "section": "Data Massaging",
+    "text": "Data Massaging\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include most of your data wrangling. If you are creating training and test sets for predictive modeling, you should include that code in an appropriate place in this section."
+  },
+  {
+    "objectID": "math-237-example.html#exploratory-data-analysis",
+    "href": "math-237-example.html#exploratory-data-analysis",
+    "title": "Math 237 Example Project",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include exploratory data analysis that is relevant to your objective."
+  },
+  {
+    "objectID": "math-237-example.html#modeling",
+    "href": "math-237-example.html#modeling",
+    "title": "Math 237 Example Project",
+    "section": "Modeling",
+    "text": "Modeling\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nIf you are not building a model, you don’t need this section. Otherwise, this section should include your predictive or inferential modeling."
+  },
+  {
+    "objectID": "math-237-example.html#conclusion",
+    "href": "math-237-example.html#conclusion",
+    "title": "Math 237 Example Project",
+    "section": "Conclusion",
+    "text": "Conclusion\n\nMain Insight\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should include one or more graphs, figures or tables that summarize the primary finding with respect to your main objective. You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.\n\n\n\n\nLimitations and Future Work\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe potential limitations of the conclusion (think about the limitations you identified earlier) and/or future work that someone might consider doing to expand on your analysis.\n\n\n\n\nReflection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nYou will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:\n\nWhat did you learn about data science from this project?\nHow did doing the data science increase your understanding of the domain you applied it to?"
   }
 ]

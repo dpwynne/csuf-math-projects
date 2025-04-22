@@ -2,11 +2,11 @@
 title: "Math 237 Example Project"
 ---
 
-#### {.disclaimer_block}
+:::{.disclaimer_block}
 
 **Disclaimer**: This project formatting is adapted from the [Open Case Studies](https://opencasestudies.github.io){target="_blank"} project. The purpose of the Open Case Studies project is **to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data**. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts. 
 
-####
+:::
 
 ::: {.callout-note icon=false}
 ## Dr. Wynne's Note
@@ -103,20 +103,6 @@ This subsection should describe the data that you are using, the source of the d
 
 :::
 
-```{r}
-#| label: import data
-#| message: false
-#| warning: false
-
-loans <- readr::read_csv(here::here("data/loans_lac_2022.csv"))
-
-data_2020 <- sf::read_sf(here::here("data/MIv3Areas_2020TractCrosswalk.geojson")) |>   
-  filter(city == "Los Angeles") # get LA only data
-
-la_ad <- jsonlite::fromJSON(here::here("data/ad_data.json")) |>
-  filter(city == "Los Angeles")
-```
-
 ### Limitations
 
 ::: {.callout-note icon=false}
@@ -139,36 +125,6 @@ This section should include most of your data wrangling. If you are creating tra
 
 :::
 
-```{r}
-glimpse(loans)
-glimpse(data_2020)
-glimpse(la_ad)
-```
-
-Note that the census tract IDs are in the same 12-digit number format and we can join the `loans` and `data_2020_la2` datasets. It is probably best to summarize the HLA data first and then join. 
-
-Note that some tracts are in multiple of the HOLC tracts, so we need the GEOID data to be the base. We also need to decide HOW to define the tract - highest grade, lowest grade, grade of highest proportion of tract?
-
-```{r}
-loans_tract <- loans |>
-  group_by(census_tract) |>
-  summarize(
-    applications = n(),
-    population = mean(tract_population),
-    minority = mean(tract_minority_population_percent),
-    income = mean(tract_to_msa_income_percentage),
-    median_loan_amount = median(loan_amount, na.rm = TRUE)
-  )
-```
-
-
-```{r}
-crosswalked <- loans_tract |>
-  left_join(
-    data_2020,
-    by = c("census_tract" = "GEOID")
-  )
-```
 
 ## Exploratory Data Analysis
 

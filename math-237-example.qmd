@@ -48,7 +48,6 @@ This section should introduce your main question or objective in the context you
 
 :::
 
-Our main objective in this project is to investigate how the historical makeup of Los Angeles neighborhoods has propagated to the present day. In particular, we are interested in how well we can predict difficulties with obtaining housing loans based on how the neighborhood was described in the 1930's.
 
 ## Packages Used In This Analysis
 
@@ -87,32 +86,13 @@ I included `message: false` and `warning: false` options in the chunk above so t
 [sf](https://r-spatial.github.io/sf/)   | to import and work with geojson files
 [jsonlite](https://jeroen.r-universe.dev/jsonlite)  | to work with json files
 [dplyr](https://dplyr.tidyverse.org/)      | to massage and summarize data
-[rsample](https://rsample.tidymodels.org/) | to split data into training and test sets
-[ggplot2](https://ggplot2.tidyverse.org/)      | to create nice-looking and informative graphs
-[broom](https://broom.tidymodels.org/)      | to neatly obtain the coefficients of a regression model
-
 
 ## Design and Data Collection
-
-### Data Description
 
 ::: {.callout-note icon=false}
 ## Dr. Wynne's Note
 
 This subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data. 
-
-:::
-
-### Limitations
-
-::: {.callout-note icon=false}
-## Dr. Wynne's Note
-
-This subsection should indicate limitations of your data and analysis. Some questions to consider addressing include:
-
-* Are the data valid (variables measure what you think they represent) and reliable (consistently and accurately measured)?
-* Are the assumptions behind your analytical methods justified?
-* Are there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?
 
 :::
 
@@ -124,7 +104,6 @@ This subsection should indicate limitations of your data and analysis. Some ques
 This section should include most of your data wrangling. If you are creating training and test sets for predictive modeling, you should include that code in an appropriate place in this section.
 
 :::
-
 
 ## Exploratory Data Analysis
 
@@ -146,21 +125,22 @@ If you are not building a model, you don't need this section. Otherwise, this se
 
 ## Conclusion
 
-### Main Insight
-
 ::: {.callout-note icon=false}
 ## Dr. Wynne's Note
 
-This subsection should include one or more graphs, figures or tables that summarize the primary finding with respect to your main objective. You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.
+This section should include one or more graphs, figures or tables that summarize the primary finding with respect to your main objective. You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.
 
 :::
 
-### Limitations and Future Work
+### Limitations
 
 ::: {.callout-note icon=false}
 ## Dr. Wynne's Note
 
-This subsection should describe potential limitations of the conclusion (think about the limitations you identified earlier) and/or future work that someone might consider doing to expand on your analysis.
+This subsection should describe potential limitations of the conclusion and/or future work that someone might consider doing to expand on your analysis. Some limitations to discuss might include:
+
+- What are the real-world consequences of using your data or models? What are the consequences of an incorrect conclusion or prediction?
+- How appropriate was the data you used to answer your question? Consider aspects of validity (variables actually measure what you think they describe) and reliability (variable values would likely be similar if they were measured again).
 
 :::
 
@@ -171,7 +151,7 @@ This subsection should describe potential limitations of the conclusion (think a
 
 You will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:
 
-* What did you learn about data science from this project?
-* How did doing the data science increase your understanding of the domain you applied it to?
+- What did you learn about data science from this project?
+- How did doing the data science increase your understanding of the domain you applied it to?
 
 :::

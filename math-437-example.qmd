@@ -63,7 +63,12 @@ The Open Case Studies project uses a tabular form, which I replicate below.
 #| message: false
 #| warning: false
 
-
+library(here)
+library(readr)
+library(dplyr)
+library(naniar)
+library(rsample)
+library(ggplot2)
 ```
 
 ::: {.callout-note icon="false"}
@@ -80,16 +85,13 @@ I included `message: false` and `warning: false` options in the chunk above so t
 | [naniar](https://naniar.njtierney.com/) | to summarize and visualize missing data |
 | [rsample](https://rsample.tidymodels.org/) | to split data into training and test sets |
 | [ggplot2](https://ggplot2.tidyverse.org/) | to create nice-looking and informative graphs |
-| [broom](https://broom.tidymodels.org/) | to neatly obtain the coefficients of a regression model |
 
-## Design and Data Collection
-
-### Data Description
+## Data Description
 
 ::: {.callout-note icon="false"}
 ## Dr. Wynne's Note
 
-This subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.
+This section should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.
 :::
 
 ```{r}
@@ -110,7 +112,7 @@ This subsection should indicate limitations of your data. To quote from the proj
 -   Real-world differences that may make your model inappropriate for data collected from other times/places/etc.
 :::
 
-## Data Massaging
+## Data Wrangling
 
 ::: {.callout-note icon="false"}
 ## Dr. Wynne's Note
@@ -147,7 +149,7 @@ This section must include, at minimum:
 This section should include one or more graphs, figures or tables that summarize your primary finding(s). You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.
 :::
 
-### Limitations and Future Work
+### Limitations
 
 ::: {.callout-note icon="false"}
 ## Dr. Wynne's Note

@@ -4,14 +4,7 @@
     "href": "math-437-example.html",
     "title": "Math 437 Example Project",
     "section": "",
-    "text": "This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr. Wynne will be looking for when grading.\n\nDisclaimer: This project formatting is adapted from the Open Case Studies project. The purpose of the Open Case Studies project is to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nAt some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project."
-  },
-  {
-    "objectID": "math-437-example.html#introduction-to-the-example",
-    "href": "math-437-example.html#introduction-to-the-example",
-    "title": "Math 437 Example Project",
-    "section": "",
-    "text": "This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr. Wynne will be looking for when grading.\n\nDisclaimer: This project formatting is adapted from the Open Case Studies project. The purpose of the Open Case Studies project is to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nAt some points in the example project, you will see boxes like this. These boxes are not part of the example project, but indicate particular things to watch out for when you create your own project."
+    "text": "Disclaimer: This project formatting is adapted from the Open Case Studies project. The purpose of the Open Case Studies project is to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts."
   },
   {
     "objectID": "math-437-example.html#motivation-and-context",
@@ -32,21 +25,21 @@
     "href": "math-437-example.html#packages-used-in-this-analysis",
     "title": "Math 437 Example Project",
     "section": "Packages Used In This Analysis",
-    "text": "Packages Used In This Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description of why you are using each package. Please use individual package names rather than tidyverse and tidymodels, to make it clear which specific packages are being used.\nThe Open Case Studies project uses a tabular form, which I replicate below.\n\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nI included message: false and warning: false options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.\n\n\n\n\n\nPackage\nUse\n\n\n\n\nhere\nto easily load and save data\n\n\nreadr\nto import the CSV file data\n\n\ndplyr\nto massage and summarize data\n\n\nnaniar\nto summarize and visualize missing data\n\n\nrsample\nto split data into training and test sets\n\n\nggplot2\nto create nice-looking and informative graphs\n\n\nbroom\nto neatly obtain the coefficients of a regression model"
+    "text": "Packages Used In This Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description of why you are using each package. Please use individual package names rather than tidyverse and tidymodels, to make it clear which specific packages are being used.\nThe Open Case Studies project uses a tabular form, which I replicate below.\n\n\n\nlibrary(here)\nlibrary(readr)\nlibrary(dplyr)\nlibrary(naniar)\nlibrary(rsample)\nlibrary(ggplot2)\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nI included message: false and warning: false options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.\n\n\n\n\n\nPackage\nUse\n\n\n\n\nhere\nto easily load and save data\n\n\nreadr\nto import the CSV file data\n\n\ndplyr\nto massage and summarize data\n\n\nnaniar\nto summarize and visualize missing data\n\n\nrsample\nto split data into training and test sets\n\n\nggplot2\nto create nice-looking and informative graphs"
   },
   {
-    "objectID": "math-437-example.html#design-and-data-collection",
-    "href": "math-437-example.html#design-and-data-collection",
+    "objectID": "math-437-example.html#data-description",
+    "href": "math-437-example.html#data-description",
     "title": "Math 437 Example Project",
-    "section": "Design and Data Collection",
-    "text": "Design and Data Collection\n\nData Description\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.\n\n\n\n\nData Limitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should indicate limitations of your data. To quote from the project proposal prompt, consider:\n\nSources of bias in the data collection methods,\nMismatches between the variables in the dataset and the real-world characteristics they are intended to describe\nReal-world differences that may make your model inappropriate for data collected from other times/places/etc."
+    "section": "Data Description",
+    "text": "Data Description\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.\n\n\n\nData Limitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should indicate limitations of your data. To quote from the project proposal prompt, consider:\n\nSources of bias in the data collection methods,\nMismatches between the variables in the dataset and the real-world characteristics they are intended to describe\nReal-world differences that may make your model inappropriate for data collected from other times/places/etc."
   },
   {
-    "objectID": "math-437-example.html#data-massaging",
-    "href": "math-437-example.html#data-massaging",
+    "objectID": "math-437-example.html#data-wrangling",
+    "href": "math-437-example.html#data-wrangling",
     "title": "Math 437 Example Project",
-    "section": "Data Massaging",
-    "text": "Data Massaging\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section contains any data wrangling you are doing. If you are creating training and test sets for predictive modeling, you should also include that code in an appropriate place in this section."
+    "section": "Data Wrangling",
+    "text": "Data Wrangling\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section contains any data wrangling you are doing. If you are creating training and test sets for predictive modeling, you should also include that code in an appropriate place in this section."
   },
   {
     "objectID": "math-437-example.html#exploratory-data-analysis",
@@ -67,7 +60,7 @@
     "href": "math-437-example.html#insights",
     "title": "Math 437 Example Project",
     "section": "Insights",
-    "text": "Insights\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include one or more graphs, figures or tables that summarize your primary finding(s). You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.\n\n\n\nLimitations and Future Work\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\n\n“All models are wrong, but some are useful.” - George Box\n“All models are wrong, but some are wrong-er.” - Sam Behseta\n\nThis section should include further exploration of the limitations of your modeling approach. Some avenues of exploration include:\n\nWho/what is being poorly predicted by your model? Why?\nHow might someone improve the data collection or analysis in the future?\nAre the assumptions behind your analytical methods justified?\nAre there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?\n\n\n\n\n\nReflection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nYou will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:\n\nWhat did you learn about statistical learning from this project?\nHow did your work increase your understanding of the domain you applied it to?"
+    "text": "Insights\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include one or more graphs, figures or tables that summarize your primary finding(s). You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.\n\n\n\nLimitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\n\n“All models are wrong, but some are useful.” - George Box\n“All models are wrong, but some are wrong-er.” - Sam Behseta\n\nThis section should include further exploration of the limitations of your modeling approach. Some avenues of exploration include:\n\nWho/what is being poorly predicted by your model? Why?\nHow might someone improve the data collection or analysis in the future?\nAre the assumptions behind your analytical methods justified?\nAre there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?\n\n\n\n\n\nReflection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nYou will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:\n\nWhat did you learn about statistical learning from this project?\nHow did your work increase your understanding of the domain you applied it to?"
   },
   {
     "objectID": "index.html",
@@ -109,21 +102,21 @@
     "href": "math-237-example.html#main-objective",
     "title": "Math 237 Example Project",
     "section": "Main Objective",
-    "text": "Main Objective\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should introduce your main question or objective in the context you described above.\n\n\nOur main objective in this project is to investigate how the historical makeup of Los Angeles neighborhoods has propagated to the present day. In particular, we are interested in how well we can predict difficulties with obtaining housing loans based on how the neighborhood was described in the 1930’s."
+    "text": "Main Objective\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should introduce your main question or objective in the context you described above."
   },
   {
     "objectID": "math-237-example.html#packages-used-in-this-analysis",
     "href": "math-237-example.html#packages-used-in-this-analysis",
     "title": "Math 237 Example Project",
     "section": "Packages Used In This Analysis",
-    "text": "Packages Used In This Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description you are using each package. The Open Case Studies project uses a tabular form, which I replicate below.\n\n\n\nlibrary(here)\nlibrary(readr)\nlibrary(dplyr)\nlibrary(sf)\nlibrary(jsonlite)\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nI included message: false and warning: false options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.\n\n\n\n\n\nPackage\nUse\n\n\n\n\nhere\nto easily load and save data\n\n\nreadr\nto import the CSV file data\n\n\nsf\nto import and work with geojson files\n\n\njsonlite\nto work with json files\n\n\ndplyr\nto massage and summarize data\n\n\nrsample\nto split data into training and test sets\n\n\nggplot2\nto create nice-looking and informative graphs\n\n\nbroom\nto neatly obtain the coefficients of a regression model"
+    "text": "Packages Used In This Analysis\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section lists the packages used in the analysis. You should have a single chunk that loads the packages followed by a description you are using each package. The Open Case Studies project uses a tabular form, which I replicate below.\n\n\n\nlibrary(here)\nlibrary(readr)\nlibrary(dplyr)\nlibrary(sf)\nlibrary(jsonlite)\n\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nI included message: false and warning: false options in the chunk above so that package conflicts and similar issues aren’t shown when loading the packages.\n\n\n\n\n\nPackage\nUse\n\n\n\n\nhere\nto easily load and save data\n\n\nreadr\nto import the CSV file data\n\n\nsf\nto import and work with geojson files\n\n\njsonlite\nto work with json files\n\n\ndplyr\nto massage and summarize data"
   },
   {
     "objectID": "math-237-example.html#design-and-data-collection",
     "href": "math-237-example.html#design-and-data-collection",
     "title": "Math 237 Example Project",
     "section": "Design and Data Collection",
-    "text": "Design and Data Collection\n\nData Description\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data.\n\n\n\n\nLimitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should indicate limitations of your data and analysis. Some questions to consider addressing include:\n\nAre the data valid (variables measure what you think they represent) and reliable (consistently and accurately measured)?\nAre the assumptions behind your analytical methods justified?\nAre there ethical concerns about how the data was collected or how the results of the analysis could be used in the real world?"
+    "text": "Design and Data Collection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe the data that you are using, the source of the data (including a link), and how the data was originally collected. At the end of the section you should import the data."
   },
   {
     "objectID": "math-237-example.html#data-massaging",
@@ -151,6 +144,6 @@
     "href": "math-237-example.html#conclusion",
     "title": "Math 237 Example Project",
     "section": "Conclusion",
-    "text": "Conclusion\n\nMain Insight\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should include one or more graphs, figures or tables that summarize the primary finding with respect to your main objective. You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.\n\n\n\n\nLimitations and Future Work\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe potential limitations of the conclusion (think about the limitations you identified earlier) and/or future work that someone might consider doing to expand on your analysis.\n\n\n\n\nReflection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nYou will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:\n\nWhat did you learn about data science from this project?\nHow did doing the data science increase your understanding of the domain you applied it to?"
+    "text": "Conclusion\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis section should include one or more graphs, figures or tables that summarize the primary finding with respect to your main objective. You should also have a paragraph describing that finding in the text and summarizing how you arrived at it.\n\n\n\nLimitations\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nThis subsection should describe potential limitations of the conclusion and/or future work that someone might consider doing to expand on your analysis. Some limitations to discuss might include:\n\nWhat are the real-world consequences of using your data or models? What are the consequences of an incorrect conclusion or prediction?\nHow appropriate was the data you used to answer your question? Consider aspects of validity (variables actually measure what you think they describe) and reliability (variable values would likely be similar if they were measured again).\n\n\n\n\n\nReflection\n\n\n\n\n\n\nDr. Wynne’s Note\n\n\n\nYou will be turning in a reflection privately on Canvas. However, you may want to include excerpts from that reflection here if you are comfortable making them public; for example, addressing:\n\nWhat did you learn about data science from this project?\nHow did doing the data science increase your understanding of the domain you applied it to?"
   }
 ]

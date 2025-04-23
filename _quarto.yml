@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - index.qmd
+    - math-237-example.qmd
+    - math-437-example.qmd
 
 website:
   title: "CSUF Math Example Projects"

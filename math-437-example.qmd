@@ -2,10 +2,6 @@
 title: "Math 437 Example Project"
 ---
 
-## Introduction to the Example
-
-This is an example project intended to highlight the sections a Math 437 student should include in their final project and what Dr. Wynne will be looking for when grading.
-
 :::{.disclaimer_block}
 
 **Disclaimer**: This project formatting is adapted from the [Open Case Studies](https://opencasestudies.github.io){target="_blank"} project. The purpose of the Open Case Studies project is **to demonstrate the use of various data science methods, tools, and software in the context of messy, real-world data**. A given case study does not cover all aspects of the research process, is not claiming to be the most appropriate way to analyze a given data set, and should not be used in the context of making policy decisions without external consultation from scientific experts.
